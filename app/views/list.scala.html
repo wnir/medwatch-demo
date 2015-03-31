@@ -1,0 +1,20 @@
+@(posts: List[Post], postForm: Form[Post])(implicit flash: play.api.mvc.Flash)
+
+@import helper._
+@import html5.tags.html._
+
+@main("news") {
+ 
+<div id="content">     
+
+
+	<h1>Messages</h1>
+    @for(post <- posts){
+    	<div class="post"> 
+    		<span class="author">User: @post.author : </span>
+    		<p>Temperature: @post.message</p>
+    	</div>
+    }
+
+</div>
+}
