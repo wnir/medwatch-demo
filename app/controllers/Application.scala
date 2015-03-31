@@ -41,7 +41,7 @@ object HtmlController extends MongoSSEApplication {
 
   def index = Action { Home }
 
-  def Home = Redirect(routes.HtmlController.list)
+  def Home = Redirect(routes.HtmlController.searchPageWS)
 
   def list = Action.async { implicit request =>    
     //find all docs
